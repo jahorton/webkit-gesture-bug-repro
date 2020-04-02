@@ -14,7 +14,35 @@
 		CEACF83124358004007B75EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEACF83024358004007B75EB /* Assets.xcassets */; };
 		CEACF83424358004007B75EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEACF83224358004007B75EB /* LaunchScreen.storyboard */; };
 		CEACF83D2435839C007B75EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEACF83C2435839C007B75EB /* WebKit.framework */; };
+		CEACF845243588E4007B75EB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACF844243588E4007B75EB /* KeyboardViewController.swift */; };
+		CEACF849243588E4007B75EB /* WebKit Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEACF842243588E4007B75EB /* WebKit Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CEACF85024358AAE007B75EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEACF83C2435839C007B75EB /* WebKit.framework */; };
+		CEACF85124358B09007B75EB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACF844243588E4007B75EB /* KeyboardViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEACF847243588E4007B75EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEACF81C24358000007B75EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEACF841243588E4007B75EB;
+			remoteInfo = "WebKit Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEACF84D243588E4007B75EB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CEACF849243588E4007B75EB /* WebKit Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CEACF82424358000007B75EB /* WebKit Gesture Bug Repro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebKit Gesture Bug Repro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +54,9 @@
 		CEACF83324358004007B75EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEACF83524358004007B75EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEACF83C2435839C007B75EB /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CEACF842243588E4007B75EB /* WebKit Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WebKit Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEACF844243588E4007B75EB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		CEACF846243588E4007B75EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +68,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEACF83F243588E4007B75EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEACF85024358AAE007B75EB /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -44,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				CEACF82624358000007B75EB /* WebKit Gesture Bug Repro */,
+				CEACF843243588E4007B75EB /* WebKit Keyboard */,
 				CEACF82524358000007B75EB /* Products */,
 				CEACF83B2435839C007B75EB /* Frameworks */,
 			);
@@ -53,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				CEACF82424358000007B75EB /* WebKit Gesture Bug Repro.app */,
+				CEACF842243588E4007B75EB /* WebKit Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +120,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CEACF843243588E4007B75EB /* WebKit Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEACF844243588E4007B75EB /* KeyboardViewController.swift */,
+				CEACF846243588E4007B75EB /* Info.plist */,
+			);
+			path = "WebKit Keyboard";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +139,34 @@
 				CEACF82024358000007B75EB /* Sources */,
 				CEACF82124358000007B75EB /* Frameworks */,
 				CEACF82224358000007B75EB /* Resources */,
+				CEACF84D243588E4007B75EB /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CEACF848243588E4007B75EB /* PBXTargetDependency */,
 			);
 			name = "WebKit Gesture Bug Repro";
 			productName = "WebKit Gesture Bug Repro";
 			productReference = CEACF82424358000007B75EB /* WebKit Gesture Bug Repro.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CEACF841243588E4007B75EB /* WebKit Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEACF84A243588E4007B75EB /* Build configuration list for PBXNativeTarget "WebKit Keyboard" */;
+			buildPhases = (
+				CEACF83E243588E4007B75EB /* Sources */,
+				CEACF83F243588E4007B75EB /* Frameworks */,
+				CEACF840243588E4007B75EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WebKit Keyboard";
+			productName = "WebKit Keyboard";
+			productReference = CEACF842243588E4007B75EB /* WebKit Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -110,6 +179,9 @@
 				ORGANIZATIONNAME = "Joshua Horton";
 				TargetAttributes = {
 					CEACF82324358000007B75EB = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					CEACF841243588E4007B75EB = {
 						CreatedOnToolsVersion = 11.4;
 					};
 				};
@@ -128,6 +200,7 @@
 			projectRoot = "";
 			targets = (
 				CEACF82324358000007B75EB /* WebKit Gesture Bug Repro */,
+				CEACF841243588E4007B75EB /* WebKit Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +216,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEACF840243588E4007B75EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -153,10 +233,27 @@
 				CEACF82C24358000007B75EB /* ViewController.swift in Sources */,
 				CEACF82824358000007B75EB /* AppDelegate.swift in Sources */,
 				CEACF82A24358000007B75EB /* SceneDelegate.swift in Sources */,
+				CEACF85124358B09007B75EB /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEACF83E243588E4007B75EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEACF845243588E4007B75EB /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEACF848243588E4007B75EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEACF841243588E4007B75EB /* WebKit Keyboard */;
+			targetProxy = CEACF847243588E4007B75EB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CEACF82D24358000007B75EB /* Main.storyboard */ = {
@@ -295,6 +392,7 @@
 		CEACF83924358004007B75EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WHE552KZN5;
@@ -314,6 +412,7 @@
 		CEACF83A24358004007B75EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WHE552KZN5;
@@ -325,6 +424,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.keyman.testing.WebKit-Gesture-Bug-Repro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEACF84B243588E4007B75EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHE552KZN5;
+				INFOPLIST_FILE = "WebKit Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keyman.testing.WebKit-Gesture-Bug-Repro.WebKit-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEACF84C243588E4007B75EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHE552KZN5;
+				INFOPLIST_FILE = "WebKit Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.keyman.testing.WebKit-Gesture-Bug-Repro.WebKit-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,6 +484,15 @@
 			buildConfigurations = (
 				CEACF83924358004007B75EB /* Debug */,
 				CEACF83A24358004007B75EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEACF84A243588E4007B75EB /* Build configuration list for PBXNativeTarget "WebKit Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEACF84B243588E4007B75EB /* Debug */,
+				CEACF84C243588E4007B75EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
