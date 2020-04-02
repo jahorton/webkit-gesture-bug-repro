@@ -25,7 +25,7 @@ class KeyboardViewController: UIInputViewController, UIGestureRecognizerDelegate
 
         NSLog("alert presented")
 
-        present(alertController, animated: true, completion: nil)
+        //present(alertController, animated: true, completion: nil)
     }
   }
 
@@ -82,6 +82,11 @@ class KeyboardViewController: UIInputViewController, UIGestureRecognizerDelegate
     longPressRecognizer!.minimumPressDuration = 0.5
     longPressRecognizer!.delegate = self
     webView!.addGestureRecognizer(longPressRecognizer!)
+
+    let webBundle = Bundle(path: Bundle.main.path(forResource: "webview-contents", ofType: "bundle")!)!
+    let page = webBundle.url(forResource: "index", withExtension: "html")!
+
+    webView!.loadFileURL(page, allowingReadAccessTo: webBundle.resourceURL!)
   }
 
   override func viewWillLayoutSubviews() {

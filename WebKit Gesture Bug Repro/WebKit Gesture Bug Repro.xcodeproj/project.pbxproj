@@ -18,6 +18,7 @@
 		CEACF849243588E4007B75EB /* WebKit Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEACF842243588E4007B75EB /* WebKit Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CEACF85024358AAE007B75EB /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEACF83C2435839C007B75EB /* WebKit.framework */; };
 		CEACF85124358B09007B75EB /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEACF844243588E4007B75EB /* KeyboardViewController.swift */; };
+		CEACF8552435C764007B75EB /* webview-contents.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CEACF8542435C764007B75EB /* webview-contents.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CEACF842243588E4007B75EB /* WebKit Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WebKit Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEACF844243588E4007B75EB /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		CEACF846243588E4007B75EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEACF8542435C764007B75EB /* webview-contents.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "webview-contents.bundle"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		CEACF82624358000007B75EB /* WebKit Gesture Bug Repro */ = {
 			isa = PBXGroup;
 			children = (
+				CEACF8532435C726007B75EB /* resources */,
 				CEACF82724358000007B75EB /* AppDelegate.swift */,
 				CEACF82924358000007B75EB /* SceneDelegate.swift */,
 				CEACF82B24358000007B75EB /* ViewController.swift */,
@@ -127,6 +130,14 @@
 				CEACF846243588E4007B75EB /* Info.plist */,
 			);
 			path = "WebKit Keyboard";
+			sourceTree = "<group>";
+		};
+		CEACF8532435C726007B75EB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEACF8542435C764007B75EB /* webview-contents.bundle */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +224,7 @@
 				CEACF83424358004007B75EB /* LaunchScreen.storyboard in Resources */,
 				CEACF83124358004007B75EB /* Assets.xcassets in Resources */,
 				CEACF82F24358000007B75EB /* Main.storyboard in Resources */,
+				CEACF8552435C764007B75EB /* webview-contents.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
