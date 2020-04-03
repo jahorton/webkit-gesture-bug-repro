@@ -23,6 +23,8 @@
           }
           ele.style.backgroundColor = "#ff0000";
           window.event.stopPropagation();
+          // This is the critical line:  calling this method will break Swift-side gesture recognition.
+          window.event.preventDefault();
 
           window.webkit.messageHandlers.keyman.postMessage('html touch has started');
         }
@@ -34,6 +36,8 @@
           }
           ele.style.backgroundColor = "#0000ff";
           window.event.stopPropagation();
+          // This is the critical line:  calling this method will break Swift-side gesture recognition.
+          window.event.preventDefault();
 
           window.webkit.messageHandlers.keyman.postMessage('html touch has moved');
         }
@@ -45,6 +49,8 @@
           }
           ele.style.backgroundColor = rgbToHex(210, 214, 220);
           window.event.stopPropagation();
+          // This is the critical line:  calling this method will break Swift-side gesture recognition.
+          window.event.preventDefault();
 
           window.webkit.messageHandlers.keyman.postMessage('html touch has ended');
         }

@@ -15,7 +15,7 @@ class KeyboardViewController: UIInputViewController, UIGestureRecognizerDelegate
       return
     }
 
-    NSLog("Message received: \(fragment)")
+    //NSLog("Message received: \(fragment)")
   }
 
   var webView: WKWebView?
@@ -25,11 +25,11 @@ class KeyboardViewController: UIInputViewController, UIGestureRecognizerDelegate
     if sender.state == .began {
       let alertController = UIAlertController(title: nil, message:
             "Long-Press Gesture Detected", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default,handler: nil))
+      alertController.addAction(UIAlertAction(title: "OK", style: .default,handler: nil))
 
-        NSLog("longPressHandler has seen .began")
+      NSLog("longPressHandler has seen .began")
 
-        //present(alertController, animated: true, completion: nil)
+      present(alertController, animated: true, completion: nil)
     }
   }
 
