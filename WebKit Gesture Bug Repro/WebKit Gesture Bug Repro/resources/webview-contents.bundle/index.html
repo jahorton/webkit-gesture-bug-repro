@@ -7,14 +7,24 @@
             body {background-color: rgb(210,214,220);}
         </style>
         <script type="text/javascript">
+        function componentToHex(c) {
+          var hex = c.toString(16);
+          return hex.length == 1 ? "0" + hex : hex;
+        }
+
+        function rgbToHex(r, g, b) {
+          return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+        }
+
         function touchstart(id) {
           var ele = document.body;
           if(id) {
             ele = document.getElementById(id);
           }
-          console.log("touch has started");
           ele.style.backgroundColor = "#ff0000";
           window.event.stopPropagation();
+
+          window.webkit.messageHandlers.keyman.postMessage('html touch has started');
         }
 
         function touchmove(id) {
@@ -22,9 +32,10 @@
           if(id) {
             ele = document.getElementById(id);
           }
-          console.log("touch has moved");
-          ele.style.backgroundColor = "#00ff00";
+          ele.style.backgroundColor = "#0000ff";
           window.event.stopPropagation();
+
+          window.webkit.messageHandlers.keyman.postMessage('html touch has moved');
         }
 
         function touchend(id) {
@@ -32,9 +43,10 @@
           if(id) {
             ele = document.getElementById(id);
           }
-          console.log("touch has ended");
-          ele.style.backgroundColor = "#0000ff";
+          ele.style.backgroundColor = rgbToHex(210, 214, 220);
           window.event.stopPropagation();
+
+          window.webkit.messageHandlers.keyman.postMessage('html touch has ended');
         }
         </script>
     </head>

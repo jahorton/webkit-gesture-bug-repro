@@ -11,7 +11,11 @@ import WebKit
 
 class KeyboardViewController: UIInputViewController, UIGestureRecognizerDelegate, WKScriptMessageHandler {
   func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-    return
+    guard let fragment = message.body as? String, !fragment.isEmpty else {
+      return
+    }
+
+    NSLog("Message received: \(fragment)")
   }
 
   var webView: WKWebView?
@@ -23,7 +27,7 @@ class KeyboardViewController: UIInputViewController, UIGestureRecognizerDelegate
             "Long-Press Gesture Detected", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default,handler: nil))
 
-        NSLog("alert presented")
+        NSLog("longPressHandler has seen .began")
 
         //present(alertController, animated: true, completion: nil)
     }
