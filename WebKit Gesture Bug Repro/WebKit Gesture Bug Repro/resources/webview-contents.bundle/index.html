@@ -7,23 +7,41 @@
             body {background-color: rgb(210,214,220);}
         </style>
         <script type="text/javascript">
-        function touchstart() {
+        function touchstart(id) {
+          var ele = document.body;
+          if(id) {
+            ele = document.getElementById(id);
+          }
           console.log("touch has started");
-          document.body.style.backgroundColor = "#ff0000";
+          ele.style.backgroundColor = "#ff0000";
+          window.event.stopPropagation();
         }
 
-        function touchmove() {
+        function touchmove(id) {
+          var ele = document.body;
+          if(id) {
+            ele = document.getElementById(id);
+          }
           console.log("touch has moved");
-          document.body.style.backgroundColor = "#00ff00";
+          ele.style.backgroundColor = "#00ff00";
+          window.event.stopPropagation();
         }
 
-        function touchend() {
+        function touchend(id) {
+          var ele = document.body;
+          if(id) {
+            ele = document.getElementById(id);
+          }
           console.log("touch has ended");
-          document.body.style.backgroundColor = "#0000ff";
+          ele.style.backgroundColor = "#0000ff";
+          window.event.stopPropagation();
         }
         </script>
     </head>
     <body ontouchstart="touchstart()" ontouchmove="touchmove()" ontouchend="touchend()">
       <p>Hello world!</p>
+      <div id='div1' ontouchstart="touchstart('div1')" ontouchmove="touchmove('div1')" ontouchend="touchend('div1')">
+        I'm a button!
+      </div>
     </body>
 </html>
