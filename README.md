@@ -9,3 +9,5 @@ an `InputViewController`, hence the structure of the reproduction.
 
 In earlier versions of iOS before 13.4, longpress handlers would still trigger in this scenario, as seen by running
 this against iOS 13.3 (or before) in the Simulator.
+
+The offending `e.preventDefault()` lines may be seen within `WebKit Gesture Bug Repro/WebKit Gesture Bug Repro/resources/webview-contents.bundle/index.html`, the page embedded within the WKWebView.  Simply comment the noted lines out and 13.4 will generate an alert for longpresses within the 'keyboard', matching the behavior of either case when within 13.3 or before.
